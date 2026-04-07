@@ -17,7 +17,7 @@ RUN mkdir -p /thinkphp /var/run/unit /var/lib/unit && \
     useradd -r -g www-data www-data 2>/dev/null || true
 
 COPY src/ /thinkphp/
-COPY unit.json /var/lib/unit/conf.json
+COPY /docker/unit.json /var/lib/unit/conf.json
 
 RUN chown -R www-data:www-data /thinkphp /var/lib/unit && chmod -R 755 /thinkphp && chmod -R 755 /var/lib/unit
 
